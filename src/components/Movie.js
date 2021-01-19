@@ -1,15 +1,16 @@
 import React from 'react'
+import './Movie.css'
 
 function Movie(props) {
-    const movieStyle = {
-        border: "1px solid black", 
-        margin: "10px", 
-        backgroundColor: "#ccddff" 
-    }
     return (
-        <div style={movieStyle} >
+        <div className="Movie">
+            <img src={props.imgURL} />
+
             <h4>{props.title}</h4>
+            <p>Year: {props.year}</p>
             <p>Rating: {props.rating}</p>
+            <button onClick={props.clickToDelete}> Hide this one ;) </button>
+            
         </div>
     )
 }

@@ -1,0 +1,11 @@
+.Movie {   
+    outline: 1px solid;
+    margin: 1%;
+    background-color: #ccddff;
+    flex: 0 1 23%;
+}
+
+.Movie button {
+    padding: 10px;
+    margin-bottom: 10px;
+}
