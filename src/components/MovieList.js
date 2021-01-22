@@ -1,5 +1,6 @@
 import React from 'react'
 import Movie from './Movie'
+import AddMovie from './AddMovie'
 import movies from '../data/movies.json'
 import './MovieList.css'
 
@@ -19,6 +20,14 @@ class MovieList extends React.Component {
         });
     }
 
+    addNewMovie = (newMovie) => {
+        const newMovies = [newMovie, ...this.state.movies];
+
+        this.setState({
+            movies: newMovies
+        });
+    }
+
     render() {
         const movieList = this.state.movies.map( elm => {
             return (
@@ -27,9 +36,12 @@ class MovieList extends React.Component {
         });
 
         return (
-            <div className="MovieList">
-                {movieList}
-            </div>
+            <React.Fragment>
+                <AddMovie submitToAdd={ this.addNewMovie } />
+                <div className="MovieList">
+                    {movieList}
+                </div>
+            </React.Fragment>
         );
     }
 }

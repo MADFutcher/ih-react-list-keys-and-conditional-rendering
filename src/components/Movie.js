@@ -9,6 +9,9 @@ function Movie(props) {
             <h4>{props.title}</h4>
             <p>Year: {props.year}</p>
             <p>Rating: {props.rating}</p>
+            
+            <p>Watched: { props.watched ? "yes" : "nope" }</p>
+
             <button onClick={props.clickToDelete}> Hide this one ;) </button>
             
         </div>

@@ -1,0 +1,15 @@
+.AddMovie {
+    border: 1px solid;
+    padding: 10px;
+    margin: 1%;
+}
+
+.AddMovie label {
+    display: block;
+}
+.AddMovie input {
+    margin: 5px 10px;
+}
+.AddMovie button {
+    padding: 5px 10px;
+}
